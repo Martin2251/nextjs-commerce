@@ -1,3 +1,7 @@
+export const metadata ={
+    title: "Add Product - Shop"
+}
+
 export default function AddProductPage(){
     return(
         <div>
