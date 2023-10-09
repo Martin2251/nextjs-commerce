@@ -1,5 +1,7 @@
 import prisma from "../lib/db/prisma"
 
+import { redirect } from "next/navigation";
+
 export const metadata ={
     title: "Add Product - Shop"
 }
@@ -20,6 +22,7 @@ if (!name || !description || !imageURL ||!price){
 await prisma.product.create({
     data:{name , description,imageURL ,price}
 })
+redirect("/")
 }
 
 export default function AddProductPage(){
